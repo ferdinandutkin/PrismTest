@@ -4,11 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
+        xmlns:vm="clr-namespace:WpfApp.ViewModel"
         mc:Ignorable="d"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:common="clr-namespace:Common;assembly=Common"
         xmlns:prism="http://prismlibrary.com/"
         Title="MainWindow" Height="450" Width="800">
+    <d:Window.DataContext>
+        <vm:MainWindowViewModel />
+    </d:Window.DataContext>
     <Window.Resources>
         <ObjectDataProvider MethodName="GetValues"
                     ObjectType="{x:Type sys:Enum}"
