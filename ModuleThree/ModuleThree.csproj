@@ -18,8 +18,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
-    <ProjectReference Include="..\ModuleCommon\ModuleCommon.csproj" />
-    <ProjectReference Include="..\ModuleOne.Contracts\ModuleOne.Contracts.csproj" />
+    <ProjectReference Include="..\ModuleThree.Contracts\ModuleThree.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="View\ViewThree.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <XamlRuntime>Wpf</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 	
 

@@ -1,16 +1,14 @@
-﻿using System.Reflection;
-using Common;
+﻿using Common;
 using ModuleCommon.View;
 using ModuleCommon.ViewModel;
-using ModuleOne.Contracts;
-using ModuleOne.View;
+using ModuleThree.Contracts;
+using ModuleThree.View;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 using Prism.Services.Dialogs;
 
-
-namespace ModuleOne;
+namespace ModuleThree;
 
 class ModuleAction : IModuleAction
 {
@@ -36,10 +34,10 @@ public class Module : IModule
     {
         var regionManager = containerProvider.Resolve<IRegionManager>();
 
-        regionManager.RegisterViewWithRegion(Contract.ViewOne, typeof(ViewOne));
-    }
+        regionManager.RegisterViewWithRegion(Contract.ViewThree, typeof(ViewThree));
+        regionManager.RegisterViewWithRegion(Contract.ViewFour, typeof(ViewFour));
 
-   
+    }
 
     public void RegisterTypes(IContainerRegistry containerRegistry)
     {

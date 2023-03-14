@@ -1,15 +1,8 @@
-﻿using Example;
-using Prism.DryIoc;
+﻿using Prism.DryIoc;
 using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Regions;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
+using WpfApp.Utils;
 
 namespace WpfApp;
 
@@ -20,12 +13,12 @@ public partial class App : PrismApplication
 {
     protected override Window CreateShell()
     {
-        return Container.Resolve<MainWindow>();
+        
+        return Container.Resolve<TaskTwo>();
     }
     protected override IModuleCatalog CreateModuleCatalog()
-
     {
-        return new ConfigurationModuleCatalog();
+        return new  RecursiveDirectoryModuleCatalog() {ModulePath = @"..\..\..\..\Modules"};
     }
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
