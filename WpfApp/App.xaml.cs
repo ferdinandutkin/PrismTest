@@ -18,10 +18,11 @@ public partial class App : PrismApplication
     }
     protected override IModuleCatalog CreateModuleCatalog()
     {
-        return new  RecursiveDirectoryModuleCatalog() {ModulePath = @"..\..\..\..\Modules"};
+        return new  RecursiveDirectoryModuleCatalog() {ModulePath = @".\Modules"};
     }
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
+
     }
 }
