@@ -1,10 +1,11 @@
-﻿using Prism.Commands;
+﻿using System;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
 
-namespace ModuleCommon.ViewModel;
+namespace WpfApp.ViewModel;
 
-public class DialogBaseViewModel : BindableBase, IDialogAware
+public class DialogStringRendererViewModel : BindableBase, IDialogAware
 {
     private string _message;
     public string Message

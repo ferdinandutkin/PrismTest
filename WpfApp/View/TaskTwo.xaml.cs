@@ -1,7 +1,7 @@
 ﻿using Prism.Regions;
 using WpfApp.ViewModel;
 
-namespace WpfApp;
+namespace WpfApp.View;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml

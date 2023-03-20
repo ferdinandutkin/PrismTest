@@ -16,12 +16,9 @@ public abstract class StaticModuleContractBase : IModuleContract
             .Select(property => property.GetValue(this))
             .OfType<string>()
             .ToList();
-        
-        Action = GetType()
-            .GetProperties(BindingFlags.Static | BindingFlags.Public)
-            .Where(property => property.CanRead && property.PropertyType == typeof(string) && property.Name.Equals("ActionName"))
-            .Select(property => property.GetValue(this))
-            .OfType<string>()
-            .First();
+
+        Action = (GetType()
+            .GetProperty("ActionName", BindingFlags.Static | BindingFlags.Public)!
+            .GetValue(this) as string)!;
     }
 }

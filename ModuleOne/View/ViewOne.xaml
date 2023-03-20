@@ -6,7 +6,5 @@
              xmlns:local="clr-namespace:ModuleOne.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <TextBlock>
-        Module One
-    </TextBlock>
+    <Button>View One</Button>
 </UserControl>

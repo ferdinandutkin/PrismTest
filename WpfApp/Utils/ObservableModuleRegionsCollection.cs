@@ -10,8 +10,6 @@ namespace WpfApp.Utils;
 
 public class ObservableModuleRegionsCollection : ObservableCollection<ModuleRegionsInfo>
 {
-    public event Action<IModuleInfo> NewModuleLoaded;
-
     public ObservableModuleRegionsCollection(IModuleManager moduleManager)
     {
         moduleManager.LoadModuleCompleted += (_, args) =>
