@@ -1,13 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
+
     <PropertyGroup>
         <TargetFramework>net6.0-windows</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
-        <OutputPath>..\bin\Modules\</OutputPath>
+        <OutputPath>..\bin\</OutputPath>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     </PropertyGroup>
-
 
     <ItemGroup>
         <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
@@ -15,8 +15,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Common\Common.csproj" />
-        <ProjectReference Include="..\ModuleCommon\ModuleCommon.csproj" />
-        <ProjectReference Include="..\ModuleOne.Contracts\ModuleOne.Contracts.csproj" />
+      <ProjectReference Include="..\Common\Common.csproj" />
     </ItemGroup>
 </Project>

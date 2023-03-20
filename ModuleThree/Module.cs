@@ -1,11 +1,11 @@
 ﻿using Common;
-using ModuleTwo.Contracts;
-using ModuleTwo.View;
+using ModuleThree.Contracts;
+using ModuleThree.View;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 
-namespace ModuleTwo;
+namespace ModuleThree;
 
 public class Module : IModule
 {
@@ -13,7 +13,8 @@ public class Module : IModule
     {
         var regionManager = containerProvider.Resolve<IRegionManager>();
 
-        regionManager.RegisterViewWithRegion(Contract.ViewTwo, typeof(ViewTwo));
+        regionManager.RegisterViewWithRegion(Contract.ViewThree, typeof(ViewThree));
+        regionManager.RegisterViewWithRegion(Contract.ViewFour, typeof(ViewFour));
 
     }
 

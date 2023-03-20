@@ -1,9 +1,9 @@
-﻿using ModuleOne.View;
+﻿using Common;
+using ModuleOne.Contracts;
+using ModuleOne.View;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
-using System.ComponentModel;
-
 namespace ModuleOne;
 
 public class Module : IModule
@@ -12,11 +12,12 @@ public class Module : IModule
     {
         var regionManager = containerProvider.Resolve<IRegionManager>();
 
-        regionManager.RegisterViewWithRegion(nameof(Common.Views.ViewOne), typeof(ViewOne));
-
+        regionManager.RegisterViewWithRegion(Contract.ViewOne, typeof(ViewOne));
     }
 
     public void RegisterTypes(IContainerRegistry containerRegistry)
     {
+        containerRegistry.Register<IModuleAction, ModuleAction>(Contract.ActionName);
+        
     }
 }
